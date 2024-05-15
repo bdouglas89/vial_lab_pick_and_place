@@ -1,0 +1,20 @@
+/* styles.css */
+textarea {
+    color: white;
+    background-color: black;
+    width: 600px;
+    height: 300px;
+    font-family: monospace;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: scroll;
+}
+
+textarea {
+    counter-reset: line;
+}
+
+textarea::first-line {
+    counter-increment: line;
+    content: counter(line) " ";
+}

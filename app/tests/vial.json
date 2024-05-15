@@ -1,0 +1,108 @@
+{
+    "racks":[
+        {
+        "rack_id":1,
+        "name": "Vial 1ml 96",
+        "rack_dimensionX": 8,
+        "rack_dimensionY": 12,
+        "vial_diameter": 8.7,
+        "empty_secure_height":300,
+        "holding_secure_height":200,
+        "picking_height":300,
+        "placing_height":200,
+        "z_holding_speed":2000,
+        "z_empyt_speed":10000,
+        "z_picking_speed":300,
+        "xy_empyt_speed":10000,
+        "xy_holding_speed":2000,
+        "open_piker": 0.4,
+        "close_piker": 0
+      },
+      {
+        "rack_id":2,
+        "name": "Vial 5ml 48",
+        "rack_dimensionX": 8,
+        "dimensionY": 6,
+        "vial_diameter": 8.7,
+        "empty_secure_height":300,
+        "holding_secure_height":200,
+        "picking_height":300,
+        "placing_height":200,
+        "z_holding_speed":2000,
+        "z_empyt_speed":10000,
+        "z_picking_speed":300,
+        "xy_empyt_speed":10000,
+        "xy_holding_speed":2000,
+        "open_piker": 0.4,
+        "close_piker": 0
+      }
+    ],
+      
+    "deck":[
+      {
+        "stand_number": 1,
+        "stand_location_X": 100,
+        "stand_location_Y": 100
+      },
+      {
+        "stand_number": 2,
+        "stand_location_X": 400,
+        "stand_location_Y": 100
+      },
+      {
+        "stand_number": 3,
+        "stand_location_X": 700,
+        "stand_location_Y": 100
+      },
+      {
+        "stand_number": 4,
+        "stand_location_X": 100,
+        "stand_location_Y": 500
+      },
+      {
+        "stand_number": 5,
+        "stand_location_X": 400,
+        "stand_location_Y": 500
+      },
+      {
+        "stand_number": 6,
+        "stand_location_X": 700,
+        "stand_location_Y": 500
+      },
+      {
+        "stand_number": 7,
+        "stand_location_X": 100,
+        "stand_location_Y": 100
+      },
+      {
+        "stand_number": 8,
+        "stand_location_X": 400,
+        "stand_location_Y": 100
+      },
+      {
+        "stand_number": 9,
+        "stand_location_X": 700,
+        "stand_location_Y": 100
+      },
+      {
+        "stand_number": 10,
+        "stand_location_X": 100,
+        "stand_location_Y": 500
+      },
+      {
+        "stand_number": 11,
+        "stand_location_X": 400,
+        "stand_location_Y": 500
+      },
+      {
+        "stand_number": 12,
+        "stand_location_X": 700,
+        "stand_location_Y": 500
+      }
+    ],
+    
+    "pref_selected _vial": 2
+    
+  }
+  
+  
