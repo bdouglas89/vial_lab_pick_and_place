@@ -11,10 +11,23 @@ def load_data():
 global data
 data = load_data()
 
+@app.route('/', methods=['GET'])
+def root():
+    return "Sitio en Ejecucion  - API Pick and Place Vial"
+
+
 # Rutas GET existentes
 @app.route('/all', methods=['GET'])
 def get_all():
     return jsonify(data)
+
+@app.route('/all', methods=['POST'])
+def add_all():
+    new_data = request.json
+    data.clear()
+    data.update(new_data)
+    save_data()
+    return jsonify(new_data), 201
 
 @app.route('/rack', methods=['GET'])
 def get_racks():

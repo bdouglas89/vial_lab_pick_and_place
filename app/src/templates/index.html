@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title> Dany-Bot </title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <script>
+            document.getElementById('btnVial').addEventListener('click', function() {
+                fetch('vial.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.contenido').innerHTML = html;
+                    })
+                    .catch(error => {
+                        console.error('Error al cargar el archivo vial.html:', error);
+                        document.querySelector('.contenido').innerHTML = '<p>Error al cargar el contenido.</p>';
+                    });
+            });
+    
+            document.getElementById('btnRack').addEventListener('click', function() {
+                fetch('rack.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.contenido').innerHTML = html;
+                    })
+                    .catch(error => {
+                        console.error('Error al cargar el archivo rack.html:', error);
+                        document.querySelector('.contenido').innerHTML = '<p>Error al cargar el contenido.</p>';
+                    });
+            });
+        </script>
+
+    <div class="body">
+    <div class="navigation">
+        <div class="logo">
+            <img src="ima/logo_machine.png" alt="My Business Logo">
+            <h1>Pick and Place Machine</h1>
+        </div>
+        
+        <a href="#" class="nav-item">
+            <span><img src="ima/external-link.png"></img></span>
+            <span> &nbsp;&nbsp;Ir a Klipper</span>
+        </a>
+        
+
+        <hr style="width:90%;">
+
+        <a href="#" class="nav-item">
+            <span><img src="ima/setting.png"></img></span>
+            <span> &nbsp;&nbsp;Configuraciónes</span>
+        </a>
+        <button id="btnVial">Valores de Vial</button>
+        <button id="btnRack">Posiciones de Rackk</button>
+        <button>Preferencia</button>
+
+    
+    </div>
+    <div class="main-content">
+
+        <div class="header">
+
+            <!--div class="search-bar">
+                <input type="search" placeholder="Buscar...">
+                <button type="button"><img class="icon" src="ima/search.png" alt="Buscar" style="filter: invert(100%);"></button>
+            </div-->
+
+            <div class="user-info">
+                <div class="user">
+                    <span class="user-name">Usuario Administrador</span>
+                    <span class="user-role">Administrador</span>
+                </div> 
+                <img src="ima/user.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="contenido">
+            
+
+        </div>
+    </div>
+    </div>
+
+    </body>
+    </html>
