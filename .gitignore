@@ -1,0 +1,15 @@
+# Ignorar archivos de configuración del entorno
+.env
+
+# Ignorar directorios
+services/pick_and_place/gcode_files
+services/pick_and_place/__pycache__
+
+# Ignorar archivos temporales de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar logs
+*.log
+
+
