@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import json
 
 app = Flask(__name__)
@@ -15,6 +15,9 @@ data = load_data()
 def root():
     return "Sitio en Ejecucion  - API Pick and Place Vial"
 
+@app.route('/app', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 # Rutas GET existentes
 @app.route('/all', methods=['GET'])
