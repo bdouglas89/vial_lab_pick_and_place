@@ -26,7 +26,16 @@ rack_data = get_rack_by_id(1, data)   #Cambia "#" por el ID del rack que desees
 # Cargar los valores de Bandejas
 deck_data = get_info_deck(data)
 
+# Cargar los valores de CSV
+pick_and_drop_list = csv_load_list("input_file.csv")
+
 print("\n\n")
 
-create_a2b(rack_data, deck_data)
+
+print("\nLISTA PICK AND PLACE\n")
+print(pick_and_drop_list)
+print(type(pick_and_drop_list))
+print("\n\n")
+
+create_a2b(rack_data, deck_data, pick_and_drop_list)
 

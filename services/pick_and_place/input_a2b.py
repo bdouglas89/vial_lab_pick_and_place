@@ -25,10 +25,10 @@
 from gcode_creator import *
 from mm_solver import *
 
-def create_a2b(rack_data, deck_data, csv_file = "input_file.csv"):
+def create_a2b(rack_data, deck_data, pick_drop_list):
 
     #Cargar CSV 
-    pick_and_drop_list = csv_load_list(csv_file)
+    pick_and_drop_list = pick_drop_list
 
     #Crar el archivo temporal
     create_gcode_file()

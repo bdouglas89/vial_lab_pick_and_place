@@ -32,6 +32,19 @@ def add_all():
     save_data()
     return jsonify(new_data), 201
 
+
+from services.pick_and_place import routine
+
+@app.route('/gcode', methods=['POST'])
+def create_gcode():
+    new_data = request.json
+    data.clear()
+    data.update(new_data)
+    save_data()
+    routine.gcode_maker(data)
+    return jsonify({'message': 'GCode File Created'}), 201
+
+
 @app.route('/rack', methods=['GET'])
 def get_racks():
     return jsonify(data['racks'])
