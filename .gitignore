@@ -2,9 +2,11 @@
 .env
 
 # Ignorar directorios
-services/pick_and_place/gcode_files
-services/pick_and_place/__pycache__
+app/pick_and_place/__pycache__
 app/__pycache__
+
+# Ignorar archivos generados por algoritmo GCODE
+*.gcode
 
 # Ignorar archivos temporales de sistema operativo
 .DS_Store
