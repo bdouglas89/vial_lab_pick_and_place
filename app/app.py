@@ -33,7 +33,7 @@ def add_all():
     return jsonify(new_data), 201
 
 
-from services.pick_and_place import routine
+from pick_and_place.routine import gcode_maker
 
 @app.route('/gcode', methods=['POST'])
 def create_gcode():
@@ -41,7 +41,7 @@ def create_gcode():
     data.clear()
     data.update(new_data)
     save_data()
-    routine.gcode_maker(data)
+    gcode_maker(data)
     return jsonify({'message': 'GCode File Created'}), 201
 
 

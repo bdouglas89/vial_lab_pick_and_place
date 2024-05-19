@@ -1,7 +1,7 @@
 import json
-from mm_solver import * 
-from gcode_creator import *
-from input_a2b import *
+from pick_and_place.mm_solver import * 
+from pick_and_place.gcode_creator import *
+from pick_and_place.input_a2b import *
 
 """
     La aplicacion recibe instrucciones desde el config_json  donde se encuentra llave con el nombre de "vial_selected" y "pick_and_place_list"

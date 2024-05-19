@@ -1,4 +1,4 @@
-from mm_solver  import *
+from pick_and_place.mm_solver  import *
 from datetime import datetime
 import csv
 import os
@@ -111,12 +111,12 @@ def create_gcode_file():
     """
     now = datetime.now()
     now = now.strftime("%d-%m-%Y_%H:%M:%S")
-    file_name = "gcode_files/temp_routine.gcode"
+    file_name = "pick_and_place/gcode_files/temp_routine.gcode"
     with open( file_name, 'w') as file:
         file.write(f";FILE CREATED  {now}\n")
     print("New temp 'temp_routine.gcode' file Created.  " + now)
 
-def append_gcode_file(line, file_name="gcode_files/temp_routine.gcode"):
+def append_gcode_file(line, file_name="pick_and_place/gcode_files/temp_routine.gcode"):
     """
     Agrega una línea al final del archivo routine.gcode.
 
@@ -131,10 +131,10 @@ def append_gcode_file(line, file_name="gcode_files/temp_routine.gcode"):
 #add_gcode_line(line)
 
 #Remombrar archivo GCODE temporal
-def gcode_file_rename(file_name="gcode_files/temp_routine.gcode"):
+def gcode_file_rename(file_name="pick_and_place/gcode_files/temp_routine.gcode"):
     now = datetime.now()
     now = now.strftime("%d%m%Y_%H%M%S")
-    new_file_name = f"gcode_files/routine_{now}.gcode"
+    new_file_name = f"pick_and_place/gcode_files/routine_{now}.gcode"
     try:
         os.rename(file_name, new_file_name)
         print (f"Gcode File Rename from \"{file_name}\" to \"{new_file_name}\"")

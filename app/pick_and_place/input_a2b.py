@@ -22,8 +22,8 @@
 
 """
 
-from gcode_creator import *
-from mm_solver import *
+from pick_and_place.gcode_creator import *
+from pick_and_place.mm_solver import *
 
 def create_a2b(rack_data, deck_data, pick_drop_list):
 
