@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, request, render_template
 import json
 from flask_cors import CORS
@@ -5,9 +6,12 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app) 
 
+# Obtiene la ruta del directorio actual del script
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Carga el contenido de vial.json en una variable global al iniciar
 def load_data():
-    with open('vial.json', 'r') as file:
+    with open(os.path.join(base_dir, 'vial.json'), 'r') as file:
         return json.load(file)
 
 global data
