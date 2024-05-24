@@ -53,6 +53,8 @@ def create_a2b(rack_data, deck_data, pick_drop_list):
     gcode_end(rack_data)
 
     #Finalizar Archivox
-    gcode_file_rename()
+    new_file_name = gcode_file_rename()
+    
+    return new_file_name
 
 

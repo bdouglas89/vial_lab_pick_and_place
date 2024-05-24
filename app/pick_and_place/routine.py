@@ -32,9 +32,9 @@ def gcode_maker(config_json):
     print (type(pick_and_place_list))
     print ("\n")
 
-    create_a2b(rack_data, deck_data, pick_and_place_list)
+    new_file_name = create_a2b(rack_data, deck_data, pick_and_place_list)
 
-    return "Archivo Generado"
+    return new_file_name
 
 """
 # Prueba de la funcion gcode_maker
