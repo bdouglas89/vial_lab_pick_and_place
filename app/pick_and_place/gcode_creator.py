@@ -109,9 +109,14 @@ def create_gcode_file():
 
         
     """
+    print("Creando Archivo GCODE")
     now = datetime.now()
     now = now.strftime("%d-%m-%Y_%H:%M:%S")
-    file_name = "./gcode_files/temp_routine.gcode"
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_name = os.path.join(base_dir, 'gcode_files', 'temp_routine.gcode')
+    
+    print(f"RUTA: {file_name}")
     with open( file_name, 'w') as file:
         file.write(f";FILE CREATED  {now}\n")
     print("New temp 'temp_routine.gcode' file Created.  " + now)
@@ -123,6 +128,9 @@ def append_gcode_file(line, file_name="./gcode_files/temp_routine.gcode"):
     Args:
     - line (str): La línea que se agregará al archivo.
     """
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_name = os.path.join(base_dir, 'gcode_files', 'temp_routine.gcode')
+    
     with open(file_name, 'a') as file:
         file.write(line + '\n')
     print("GCODE Append: "+ line + "\n") 
@@ -134,7 +142,11 @@ def append_gcode_file(line, file_name="./gcode_files/temp_routine.gcode"):
 def gcode_file_rename(file_name="./gcode_files/temp_routine.gcode"):
     now = datetime.now()
     now = now.strftime("%d%m%Y_%H%M%S")
-    new_file_name = f"./gcode_files/routine_{now}.gcode"
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_name = os.path.join(base_dir, 'gcode_files', 'temp_routine.gcode')
+    
+    new_file_name = os.path.join(base_dir, 'gcode_files', 'routine_'+now+'.gcode')
     try:
         os.rename(file_name, new_file_name)
         print (f"Gcode File Rename from \"{file_name}\" to \"{new_file_name}\"")
@@ -143,6 +155,8 @@ def gcode_file_rename(file_name="./gcode_files/temp_routine.gcode"):
         print ("Gcode File Done Succesfull")
     except OSError as e:
         print(f"Error al renombrar Archivo {e}")
+        
+    return new_file_name
 
 
 #************************************************************************************************************************
