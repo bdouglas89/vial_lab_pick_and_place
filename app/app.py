@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, send_file
 import json
 from flask_cors import CORS
 
@@ -41,14 +41,31 @@ def add_all():
 
 from pick_and_place.routine import gcode_maker
 
+# @app.route('/gcode', methods=['POST'])
+# def create_gcode():
+#     new_data = request.json
+#     data.clear()
+#     data.update(new_data)
+#     save_data()
+#     gcode_maker(data)
+#     return jsonify({'message': 'GCode File Created'}), 201
+
 @app.route('/gcode', methods=['POST'])
 def create_gcode():
     new_data = request.json
     data.clear()
     data.update(new_data)
     save_data()
-    gcode_maker(data)
-    return jsonify({'message': 'GCode File Created'}), 201
+    gcode_path = gcode_maker(data)
+    # gcode_path = os.path.join(base_dir, 'pick_and_place', 'gcode_files', 'temp_routine.gcode')
+    
+    # Agregar impresión de depuración
+    if not os.path.exists(gcode_path):
+        print(f"Error: El archivo {gcode_path} no existe.")
+        return jsonify({"error": "G-code file not found"}), 500
+    
+    print(f"PATH: {gcode_path}")
+    return send_file(gcode_path, as_attachment=True, download_name='routine.gcode')
 
 
 @app.route('/rack', methods=['GET'])
