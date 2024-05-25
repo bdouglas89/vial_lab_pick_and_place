@@ -41,15 +41,6 @@ def add_all():
 
 from pick_and_place.routine import gcode_maker
 
-# @app.route('/gcode', methods=['POST'])
-# def create_gcode():
-#     new_data = request.json
-#     data.clear()
-#     data.update(new_data)
-#     save_data()
-#     gcode_maker(data)
-#     return jsonify({'message': 'GCode File Created'}), 201
-
 @app.route('/gcode', methods=['POST'])
 def create_gcode():
     new_data = request.json
@@ -57,7 +48,6 @@ def create_gcode():
     data.update(new_data)
     save_data()
     gcode_path = gcode_maker(data)
-    # gcode_path = os.path.join(base_dir, 'pick_and_place', 'gcode_files', 'temp_routine.gcode')
     
     # Agregar impresión de depuración
     if not os.path.exists(gcode_path):
