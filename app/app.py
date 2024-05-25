@@ -64,8 +64,12 @@ def create_gcode():
         print(f"Error: El archivo {gcode_path} no existe.")
         return jsonify({"error": "G-code file not found"}), 500
     
-    print(f"PATH: {gcode_path}")
-    return send_file(gcode_path, as_attachment=True, download_name='routine.gcode')
+    # Leer el contenido del archivo G-code
+    with open(gcode_path, 'r') as file:
+        gcode_content = file.read()
+    
+    # Devolver el contenido del archivo G-code en una respuesta JSON
+    return jsonify({"gcode": gcode_content})
 
 
 @app.route('/rack', methods=['GET'])
