@@ -44,7 +44,6 @@ def create_a2b(rack_data, deck_data, pick_drop_list):
 
     #Home de Piker
     gcode_home_piker()
-    gcode_macro_pickeroff()
 
     #Generar GCODE de los movimientos
     gcode_pick_and_drop_create(pick_and_drop_list, rack_data, deck_data)
