@@ -4,7 +4,7 @@
             "rack_id": 1,
             "name": "Vial 1ml 96",
             "rack_dimensionX": 8,
-            "rack_dimensionY": 12,
+            "rack_dimensionY": 12.5,
             "vial_diameter": 9.34,
             "empty_secure_height": 20,
             "holding_secure_height": 16,
