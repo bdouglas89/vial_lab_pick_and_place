@@ -26,7 +26,7 @@ def do_a2b(pick, drop, rack_data, info_deck):
     gcode_goto_z_empty(rack_data)
 
      #Hacer pausa antes del Picking
-    gcode_pause(800)
+    gcode_pause(300)
 
     #(Piker / Bajar a  Altura de agarre)
     #gcode_comment("G1 Z320 ;??? Bajar en Z a altura de agarre.")
@@ -46,7 +46,7 @@ def do_a2b(pick, drop, rack_data, info_deck):
     gcode_goto_xy(drop, rack_data, info_deck)
     
     #Hacer pausa antes del placing
-    gcode_pause(1400)
+    gcode_pause(300)
 
     #(Piker / Bajar a  Altura para Depositar el Vial)
     #gcode_comment("G1 Z310 ;??? Bajar en Z a altura para Depositar el Vial.")
