@@ -53,10 +53,10 @@ def do_a2b(pick, drop, rack_data, info_deck):
     gcode_goto_z_placing(rack_data)
 
     #(Obturador empuja el vial )
-    gcode_PICKER_ON()
+    gcode_macro_pickeron()
 
 #(Obturador vuelve a la posicion de reposo )
-    gcode_PICKER_OFF()
+    gcode_macro_pickeroff()
 
     #Ir a Altura Segura
     gcode_goto_z_empty(rack_data)
