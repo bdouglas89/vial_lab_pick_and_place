@@ -235,7 +235,7 @@ def gcode_goto_xy(route, rack_data, info_deck ):
 #Mueve el Piker a una altura segura Sin el Vial
 def gcode_goto_z_empty(rack_data):
     z = mm_z_piker_empty(rack_data)
-    append_gcode_file(f"G1 Z{z} F2000")
+    append_gcode_file(f"G1 Z{z} F1000")
 
 #Mueve el Piker a una altura indicada
 def gcode_goto_z_value(value):
@@ -246,7 +246,7 @@ def gcode_goto_z_value(value):
 def gcode_goto_z_holding(rack_data):
     z = mm_z_piker_holding(rack_data)
 
-    append_gcode_file(f"G1 Z{z} F1500; Mueve el Piker con Vial a una altura segura")
+    append_gcode_file(f"G1 Z{z} F1000; Mueve el Piker con Vial a una altura segura")
 
 #Mover en Z al indice valor indicado
 def gcode_goto_z(z, speed):
