@@ -40,63 +40,63 @@
     "deck": [
         {
             "stand_number": 1,
-            "stand_location_X": 13,
-            "stand_location_Y": 125.81
+            "stand_location_X": 17.07,
+            "stand_location_Y": 155
         },
         {
             "stand_number": 2,
-            "stand_location_X": 153,
-            "stand_location_Y": 125.81
+            "stand_location_X": 158.07,
+            "stand_location_Y": 155
         },
         {
             "stand_number": 3,
-            "stand_location_X": 294.8,
-            "stand_location_Y": 125.81
+            "stand_location_X": 299.07,
+            "stand_location_Y": 155
         },
         {
             "stand_number": 4,
-            "stand_location_X": 437.2,
-            "stand_location_Y": 125.81
+            "stand_location_X": 441.07,
+            "stand_location_Y": 155
         },
         {
             "stand_number": 5,
-            "stand_location_X": 12.07,
-            "stand_location_Y": 273
+            "stand_location_X": 17.07,
+            "stand_location_Y": 304
         },
         {
             "stand_number": 6,
-            "stand_location_X": 153.5,
-            "stand_location_Y": 273
+            "stand_location_X": 158.07,
+            "stand_location_Y": 304
         },
         {
             "stand_number": 7,
-            "stand_location_X": 294.8,
-            "stand_location_Y": 273
+            "stand_location_X": 299.07,
+            "stand_location_Y": 304
         },
         {
             "stand_number": 8,
-            "stand_location_X": 437.2,
-            "stand_location_Y": 273
+            "stand_location_X": 441.07,
+            "stand_location_Y": 304
         },
         {
             "stand_number": 9,
-            "stand_location_X": 12.07,
-            "stand_location_Y": 419.8
+            "stand_location_X": 17.07,
+            "stand_location_Y": 450
         },
         {
             "stand_number": 10,
-            "stand_location_X": 153.5,
-            "stand_location_Y": 419.8
+            "stand_location_X": 158.07,
+            "stand_location_Y": 450
         },
         {
             "stand_number": 11,
-            "stand_location_X": 294.8,
-            "stand_location_Y": 419.8
+            "stand_location_X": 299.07,
+            "stand_location_Y": 450
         },
         {
             "stand_number": 12,
-            "stand_location_X": 438.6,
-            "stand_location_Y": 419.8
+            "stand_location_X": 441.07,
+            "stand_location_Y": 450
         }
     ],
     "pref_selected _vial": 2,
